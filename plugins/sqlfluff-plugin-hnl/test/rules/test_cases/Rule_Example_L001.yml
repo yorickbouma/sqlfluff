@@ -1,26 +1,15 @@
-rule: Example_L001
+rule: HNL_A001
 
-no_forbidden_col_used:
+no_missing_alias:
   pass_str: |
     select
-      a,
-      sum(b)
-    from tbl
-    group by a
-    order by a
-
-no_order_by_used:
-  pass_str: |
-    select
-      a,
-      b,
-      c
+      a AS a,
+      b AS b
     from tbl
 
-forbidden_col_used:
+missing_alias:
   fail_str: |
     select
-      bar,
-      baz
+      a,
+      b
     from tbl
-    order by bar

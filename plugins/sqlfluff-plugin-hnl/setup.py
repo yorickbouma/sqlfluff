@@ -1,10 +1,10 @@
-"""Setup file for an example rules plugin."""
+"""Setup file for the HNL rules plugin."""
 
 from setuptools import find_packages, setup
 
 # Change these names in your plugin, e.g. company name or plugin purpose.
-PLUGIN_LOGICAL_NAME = "example"
-PLUGIN_ROOT_MODULE = "sqlfluff_plugin_example"
+PLUGIN_LOGICAL_NAME = "hnl"
+PLUGIN_ROOT_MODULE = "sqlfluff_plugin_hnl"
 
 setup(
     name=f"sqlfluff-plugin-{PLUGIN_LOGICAL_NAME}",

@@ -1,4 +1,4 @@
-"""An example of a custom rule implemented through the plugin system.
+"""HNL custom rules implemented through the plugin system.
 
 This uses the rules API supported from 0.4.0 onwards.
 """
@@ -15,9 +15,7 @@ from sqlfluff.utils.functional import FunctionalContext, Segments, sp
 from sqlfluff.core.parser import KeywordSegment, WhitespaceSegment
 
 
-# These two decorators allow plugins
-# to be displayed in the sqlfluff docs
-class Rule_Example_L001(BaseRule):
+class Rule_HNL_A001(BaseRule):
     """Simple (non-expression) column should have alias
 
     Even when a column is a simple column,
