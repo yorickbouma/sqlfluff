@@ -16,7 +16,7 @@ from sqlfluff.core.rules import BaseRule
 # warning is triggered).
 # See note below in `get_rules()` for more details.
 # i.e. we DO NOT recommend importing here:
-from sqlfluff_plugin_example.rules import Rule_Example_L001  # noqa: F401
+#from sqlfluff_plugin_example.rules import Rule_Example_L001  # noqa: F401
 
 
 @hookimpl
