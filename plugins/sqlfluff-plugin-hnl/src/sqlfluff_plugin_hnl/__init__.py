@@ -13,9 +13,9 @@ from sqlfluff.core.rules import BaseRule
 def get_rules() -> List[Type[BaseRule]]:
     """Get plugin rules."""
 
-    from sqlfluff_plugin_hnl.rules import Rule_HNL_A001  # noqa: F811
+    from sqlfluff_plugin_hnl.rules import Rule_HNL_A001, Rule_HNL_A002  # noqa: F811
 
-    return [Rule_HNL_A001]
+    return [Rule_HNL_A001, Rule_HNL_A002]
 
 
 @hookimpl
@@ -31,5 +31,8 @@ def load_default_config() -> dict:
 def get_configs_info() -> dict:
     """Get rule config validations and descriptions."""
     return {
-        "forbidden_columns": {"definition": "A list of column to forbid"},
+        "alias_usage_style": {
+            "validation": ["always", "consistent_file", "consisent_clause"],
+            "definition": "The alias usage style to enforce.",
+        }
     }
